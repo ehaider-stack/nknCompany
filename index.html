@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>جارٍ التحميل...</title>
+  <style>
+    /* صفحة التحميل */
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 9999;
+        opacity: 1;
+        transition: opacity 0.8s ease; /* لتأثير التلاشي */
+    }
+
+    /* النقاط المتحركة */
+    .dots {
+        display: flex;
+        gap: 10px;
+    }
+
+    .dots span {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        display: inline-block;
+        animation: bounce 1.4s infinite ease-in-out both;
+    }
+
+    .dots span:nth-child(1) { background-color: #1E4669; animation-delay: 0s; }
+    .dots span:nth-child(2) { background-color: #6AA1C0; animation-delay: 0.2s; }
+    .dots span:nth-child(3) { background-color: #AC9F8E; animation-delay: 0.4s; }
+    .dots span:nth-child(4) { background-color: #BBBAB6; animation-delay: 0.6s; }
+
+    @keyframes bounce {
+        0%, 80%, 100% { transform: scale(0); }
+        40% { transform: scale(1); }
+    }
+
+    /* نص التحميل */
+    #preloader p {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #333;
+    }
+  </style>
+</head>
+<body>
+  <!-- صفحة التحميل بالدوران -->
+  <div id="preloader">
+      <div class="dots">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+      <p>جارٍ التحميل...</p>
+  </div>
+
+  <script>
+    window.addEventListener("load", function() {
+        const preloader = document.getElementById("preloader");
+
+        setTimeout(() => {
+            preloader.style.opacity = "0"; // تلاشي
+            setTimeout(() => {
+                // بعد الانتهاء نحول للصفحة الرئيسية
+                // نضيف window.location.hash عشان لو كان الرابط فيه #id يحفظه
+                window.location.href = "homePage.html" + window.location.hash;
+            }, 800);
+        }, 1500);
+    });
+  </script>
+</body>
+</html>

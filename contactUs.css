@@ -1,0 +1,245 @@
+body {
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    background-color: rgba(187, 186, 182, 0.09);
+    margin: 0;
+    
+    
+}
+
+/* للأجهزة الصغيرة والمتوسطة (Tablet) */
+@media (min-width: 768px){
+    .container {
+        width: 750px;
+        margin: 0 auto; /* لتمركز المحتوى */
+    }
+}
+
+/* للشاشات المتوسطة والكبيرة (Laptop) */
+@media (min-width: 992px){
+    .container {
+        width: 970px;
+        margin: 0 auto;
+    }
+}
+
+/* للشاشات الكبيرة (Desktop) */
+@media (min-width: 1200px){
+    .container {
+        width: 1170px;
+        margin: 0 auto;
+    }}
+
+    
+/* header */
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* يبعد القائمة عن الشعار */
+    flex-direction: row-reverse; /* الشعار على اليمين */
+    background-color: rgba(187, 186, 182, 0.205);
+    padding: 1.5px 3px 1.5em;
+    height: 100px;
+}
+
+ul {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+ul li {
+    margin-left: 60px;
+    list-style: none;
+    position: relative; /* مهم للقائمة المنسدلة */
+}
+
+ul li a {
+    font-size: 23px;
+    text-decoration: none;
+    color: #1C3F5E;
+    padding: 10px;
+    display: block;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+img.logo {
+    margin-top: 30px;
+
+    margin-right: 5em;
+    height: 120px;
+    width: 500px;
+    max-width: 20%;
+}
+
+:root{
+  --brand: #0b3f69;
+  --text:  #0b3f69;
+  --border: #e9e4ee;
+  --bg:rgba(176, 208, 231, 0.116);
+  --whatsapp: #567E97;   /* الأخضر (واتساب) */
+
+}
+
+.contact{
+    align-self: center;
+    justify-self: center;
+    display: block;
+    direction:rtl;
+    margin-top: 100px;
+    font-size: 20px;
+
+}
+h2{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+}
+
+
+/* الكرت */
+.contact-card{
+  max-width: 320px;
+  margin: 60px auto;
+  padding: 40px 28px;
+  text-align: center;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.822);
+  position: relative;
+}
+
+/* خطوط تجميلية يمين ويسار */
+.contact-card::before,
+.contact-card::after{
+  content:"";
+  position:absolute;
+  top:28px;
+  height:2px;
+  width:36%;
+  background: linear-gradient(to left, transparent, #e9e4ee 60%, transparent);
+}
+.contact-card::after{ right:24px; transform: scaleX(-1);}
+.contact-card::before{ left:24px; }
+
+/* الأيقونة */
+.cc-icon{
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 20px;
+}
+.cc-icon svg{
+  width:100%; height:100%; display:block;
+}
+
+/* العنوان */
+.cc-title{
+  margin: 0 0 14px;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+/* الإيميل */
+.cc-email{
+  display:inline-block;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  border: 1px solid #ede6f0;
+  background: #fdfbfe;
+  direction: ltr;
+  transition: .2s;
+}
+.cc-email:hover{
+  transform: translateY(-2px);
+  border-color: #e3d8e8;
+  box-shadow: 0 8px 20px rgba(123,42,127,.12);
+}
+
+
+.whatsapp circle { fill: var(--whatsapp); }
+.whatsapp path { fill: #fff; }
+.footer { 
+  background: linear-gradient(to top, #1E4669);
+  color: #fff;
+  padding: 40px 0;
+  font-family: Arial, sans-serif;
+  margin-top: 200px;
+
+}
+
+.footer .container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* عشان يكون Responsive */
+
+}
+
+/* النص */
+.footer-text {
+  flex: 1;
+  text-align: right;
+  padding: 0 20px;
+  min-width: 300px;
+}
+
+.footer-text p {
+  line-height: 1.8;
+  font-size: 20px;
+  direction: rtl;
+  text-align: justify;  /* ضبط النص */
+  text-justify: inter-word; 
+}
+
+/* قسم التواصل */
+.footer-social {
+  flex: 1;
+  text-align: right; /* خلي النص والأيقونات يمين */
+  padding: 0 20px;
+  min-width: 300px;
+  
+}
+
+.footer-social h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center; /* عنوان تواصل معنا يمين */
+}
+
+/* الأيقونات */
+.social-icons {
+  direction: rtl;       /* ترتيب الأيقونات من اليمين لليسار */
+  text-align: center;    /* اصطفاف الأيقونات يمين */
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-left: 10px;    /* بدل margin-right */
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+

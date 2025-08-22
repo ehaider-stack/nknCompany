@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jobs</title>
+	<link rel="stylesheet" type="text/css" href="jobs.css">
+
+	<style type="text/css"> 	h1{margin-bottom: -10px;}
+	</style>
+</head>
+<body>
+
+     <header>
+    <nav> <img  class="logo" src="company-logo.png"
+    alt="“image"></a> 
+       <ul>
+          <li><a href="contactUs.html">تواصل معنا</a></li>
+          <li><a href="jobs.html">التوظيف</a></li>
+          <li><a href="homePage.html#services-section">خدماتنا</a></li>
+           <li class="dropdown">
+      <a href="homePage.html#aboutus">من نحن</a>
+    </li>
+          <li><a href="homePage.html">الرئيسية</a></li>
+
+       </ul></nav> 
+       </header>
+
+       <div class="img-1">
+         <h1>اعثر على شغفك معنا لنخلق معا بيئة تشجع الابداع والنمو</h1>
+         </div>
+
+     <!-- فورم التوظيف-->
+      <div class="form-container">
+    <div class="join">انضم إلينا</div>
+    <form method="post" onsubmit="showMessage(event)" id="contactForm">
+        <div class="employee-data">
+            <label for="name">
+            <div class="input-box">
+                <span class="data">الاسم</span>
+                <input type="text" id="name" name="full_name" placeholder="ادخل الاسم الثلاثي" required>
+            </div>
+        </label>
+        <label for="phone">
+            <div class="input-box">
+                <span class="data">رقم الجوال</span>
+                <input type="number" id="phone" name="phone" placeholder="1234567890" required>
+            </div>
+            </label>
+            <label for="email1">
+            <div class="input-box">
+                <span class="data">البريد الإلكتروني</span>
+                <input type="email" id="email1" name="email" placeholder="ABC@gmail.com" required>    
+            </div>
+            </label>
+
+            <div class="gender-box">
+                <span class="gender-title">الجنس</span>
+                <div class="category">
+                    <label>
+                        <input type="radio" name="gender" value="male" required>
+                        <span class="dot one"></span>
+                        <span class="gender">ذكر</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female" required>
+                        <span class="dot one"></span>
+                        <span class="gender">أنثى</span>
+                    </label>
+                </div>
+            </div>
+
+            
+            <div class="degree">
+                <label for="academic">الدرجة العلمية</label>
+                <select name="degree" id="academic" required>
+                    <option value="">اختر الدرجة العلمية</option>
+                    <option value="diploma">دبلوم</option>
+                    <option value="bachelor">بكالوريوس</option>
+                    <option value="master">ماجستير</option>
+                    <option value="phd">دكتوراه</option>
+                </select>
+            </div>
+
+            <label for="major1">
+            <div class="input-box">
+                <span class="data">التخصص العلمي</span>
+                <input type="text" id="major1" name="major" placeholder="علوم الحاسب الآلي" required>    
+            </div>
+            </label>
+
+            <label for="salary1">
+            <div class="input-box">
+                <span class="data">الراتب المتوقع</span>
+                <input type="number" id="salary1" name="salary" placeholder="5000" required>    
+            </div>
+            </label>
+
+            
+            <div class="experience">
+                <label for="experience">الخبرة</label>
+                <select name="experience" id="experience" required>
+                    <option value="">اختر الخبرة</option>
+                    <option value="fresh">حديث التخرج</option>
+                    <option value="1-2">1-2 سنوات</option>
+                    <option value="3-5">3-5 سنوات</option>
+                    <option value="more">أكثر من 5 سنوات</option>
+                </select>
+            </div>
+            
+            <div class="input-box">
+                <span class="data">السيرة الذاتية</span>
+                <input type="file" name="cv" required>    
+            </div>
+            <div class="submit-btn">
+                <input type="submit" value="ارسال">
+            </div>
+        </div>
+    </form>
+</div>
+
+
+<footer class="footer">
+  <div class="container">
+    
+    <!-- النص في اليمين -->
+    <div class="footer-text">
+      <p>
+      في "نكن" لا نبحث فقط عن الفرص، بل نبتكرها،  نُشغّل المشاريع باحتراف، نُسوقها بذكاء، ونُحقق عوائد مجزية بشراكة وثقة ورؤية مستقبلية.
+جميع الاستثمارات موثقة بشكل رسمي وقانوني، مع ضمان الشفافية الكاملة في إدارة الأموال وتوزيع الأرباح.
+
+      </p>
+    </div>
+
+    <!-- الأيقونات في اليسار -->
+    <div class="footer-social">
+      <h3>تواصل معنا</h3>
+      <div class="social-icons">
+          <a href="https://api.whatsapp.com/send?phone=966555086688"target="_blank"><img src="whatsApp.png" alt="WhatsApp"></a>
+        <a href="https://x.com/nkn_group"target="_blank"><img src="x.png" alt="X"></a>
+        <a href="https://instagram.com/nkn_group"target="_blank"><img src="instagram.png" alt="Instagram"></a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script>
+  function showMessage(e) {
+    e.preventDefault(); // يمنع إرسال الفورم الحقيقي
+    alert(" تم إرسال رسالتك بنجاح،✅ شكرًا لتواصلك معنا!");
+    // تفريغ البيانات من الفورم
+    document.getElementById("contactForm").reset();
+  }
+</script>
+
+</body>
